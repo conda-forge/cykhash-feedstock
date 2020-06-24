@@ -10,8 +10,7 @@ source:
   sha256: 2ed17bffaccce3564407f41fce96ed79cc00a72427b3957674ea89148c1844e1
 
 build:
-  number: 0
-  noarch: python
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -19,11 +18,11 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - python >=3.5
+    - python
     - pip
     - cython >=0.28
   run:
-    - python >=3.5
+    - python
 
 test:
   imports:
