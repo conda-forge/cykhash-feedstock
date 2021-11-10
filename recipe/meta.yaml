@@ -1,4 +1,4 @@
-{% set version = "1.0.2" %}
+{% set version = "2.0.0" %}
 {% set name = "cykhash" %}
 
 package:
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2ed17bffaccce3564407f41fce96ed79cc00a72427b3957674ea89148c1844e1
+  sha256: ab2e7b3a701291f71df626d8fe597a50b097c1b33e25b4c37681415639d270fd
 
 build:
-  number: 2
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -31,8 +31,8 @@ test:
 about:
   home: https://github.com/realead/cykhash
   license: MIT
-  license_file: 'LICENSE'
-  summary: 'cython wrapper for khash-sets/maps, efficient implementation of `isin` and `unique`'
+  license_file: LICENSE
+  summary: cython wrapper for khash-sets/maps, efficient implementation of `isin` and `unique`
 
 extra:
   recipe-maintainers:
